@@ -1,0 +1,7 @@
+opencv-contrib-python==4.11.0.86
+mediapipe==0.10.21
+pyautogui>=0.9.54
+numpy>=1.26.0,<2.0.0
+pycaw>=20230407; platform_system == "Windows"
+comtypes>=1.4.0; platform_system == "Windows"
+Pillow>=10.0.0

@@ -1,0 +1,7 @@
+.venv/
+.matplotlib-cache/
+__pycache__/
+*.py[cod]
+screenshots/*.png
+recordings/*.mp4
+.DS_Store
