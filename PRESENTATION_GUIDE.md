@@ -48,29 +48,3 @@ The app reports live frames per second, but FPS is not a measure of gesture accu
 | Runtime performance | FPS displayed by the app during the same trial |
 
 Include the number of attempts, camera, environment, and lighting so the results are reproducible.
-
-## Likely viva questions
-
-**Why use MediaPipe?**  
-It provides hand landmarks directly, so the prototype can focus on interaction logic instead of training a hand detector from scratch.
-
-**What does OpenCV do?**  
-It captures and transforms webcam frames, displays the live interface, and draws landmarks and status information.
-
-**How does the app recognize a pinch?**  
-It measures the pixel distance between selected fingertip landmarks. The threshold scales with the detected palm width so the gesture remains usable when the hand moves nearer or farther from the camera.
-
-**How are accidental repeated actions reduced?**  
-Discrete actions such as clicks and screenshots have a cooldown. Desktop actions can also be paused with Space.
-
-**What does the recording feature save?**  
-It saves the annotated webcam preview as a local MP4 for a demo replay. It does not record the desktop or audio.
-
-**Is this a trained custom AI model?**  
-No. Hand tracking uses MediaPipe’s pretrained model. The gesture mapping is implemented as geometric rules over landmarks.
-
-**What are the main limitations?**  
-Low light, occlusion, camera angle, and differences in hand pose can affect landmark quality. Gesture rules are a prototype and may need personalization for different users.
-
-**What would you improve next?**  
-Collect consented gesture samples, measure per-gesture accuracy and latency, add calibration for each user, and compare the current rules with a trained temporal gesture classifier.
